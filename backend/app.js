@@ -14,7 +14,7 @@ mongoose.connect("mongodb+srv://jesusfb:Dove3229-@cluster0.yx9sjqo.mongodb.net/"
     process.exit(1); // Exit the process with failure
   });
 
-app.use(cors({ origin: ["https://vendor-backend.vercel.app"] }));
+app.use(cors({ origin: ["https://vendor-backend-nine.vercel.app"] }));
 app.use(express.json());
 app.use("/", userRouter);
 app.use(errorHandler);
