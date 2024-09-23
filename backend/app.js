@@ -7,14 +7,14 @@ const errorHandler = require("./middlewares/errorHandlerMiddleware");
 
 const app = express();
 
-mongoose.connect("mongodb+srv://lextrone000567:f89ir0kgyLMIzoY8@vendor.ksxm8mw.mongodb.net/")
+mongoose.connect("mongodb+srv://jesusfb:Dove3229-@cluster0.yx9sjqo.mongodb.net/")
   .then(() => console.log("DB Connected"))
   .catch((e) => {
     console.error("DB Connection Error:", e);
     process.exit(1); // Exit the process with failure
   });
 
-app.use(cors({ origin: ["http://localhost:5173"] }));
+app.use(cors({ origin: ["https://vendor-backend.vercel.app"] }));
 app.use(express.json());
 app.use("/", userRouter);
 app.use(errorHandler);
